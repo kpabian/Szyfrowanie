@@ -1,4 +1,5 @@
 ﻿using Bezpieczenstwo1.Classes;
+using System.Text.RegularExpressions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace Bezpieczenstwo1
     /// </summary>
     public partial class CaesarCipher : Window
     {
-        public char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'r', 's', 'ś', 't', 'u', 'w', 'x', 'y', 'z', 'ź', 'ż' };
+        public char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u', 'w', 'x', 'y', 'z', 'ź', 'ż' };
         public CaesarCipher()
         {
             InitializeComponent();
@@ -31,24 +32,56 @@ namespace Bezpieczenstwo1
         {
             StringBuilder sipher = new StringBuilder();
 
-            foreach (char c in textToBeEncrypted.Text)
+            try
             {
-                sipher.Append(Convert.ToChar(c + int.Parse(stepNumber.Text)));
+                foreach (char c in textToBeEncrypted.Text)
+                {
+                    if (c == ' ')
+                        sipher.Append(c);
+                    else
+                    {
+                        int i = 0;
+                        while (c != alphabet[i])
+                            i++;
+
+                        int charSipher = i + int.Parse(stepNumber.Text);
+                        if (charSipher >= alphabet.Length)
+                            charSipher = charSipher - alphabet.Length;
+
+                        sipher.Append(alphabet[charSipher]);
+                    }
+                }
+                textToBeEncrypted.Text = sipher.ToString();
             }
-            textToBeEncrypted.Text = sipher.ToString();
+            catch(Exception)
+            {
+                MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami oraz poprawnie wprowadzoną wartość przesunięcia");
+            }
         }
 
         private void decipherButton_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder sipher = new StringBuilder();
-
-            foreach (char c in textToBeEncrypted.Text)
+            try
             {
-                //sipher.Append(Convert.ToChar(c - int.Parse(stepNumber.Text)));
+                foreach (char c in textToBeEncrypted.Text)
+                {
+                    int i = 0;
+                    while (c != alphabet[i])
+                        i++;
 
+                    int charSipher = i - int.Parse(stepNumber.Text);
+                    if (charSipher < 0)
+                        charSipher = charSipher + alphabet.Length;
 
+                    sipher.Append(alphabet[charSipher]);
+                }
+                textToBeEncrypted.Text = sipher.ToString();
             }
-            textToBeEncrypted.Text = sipher.ToString();
+            catch( Exception )
+            {
+                MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami oraz poprawnie wprowadzoną wartość przesunięcia");
+            }
         }
 
         private void backButton_Click(object sender, RoutedEventArgs e)
@@ -57,5 +90,7 @@ namespace Bezpieczenstwo1
             mainWindow.Show();
             this.Close();
         }
+        
     }
+    
 }

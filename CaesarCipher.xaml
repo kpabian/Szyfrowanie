@@ -32,7 +32,7 @@
         <TextBlock Grid.Column="1" Foreground="#E4A74E" Grid.Row="2" Text="przesunięcie" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBlock Grid.Column="1" Foreground="#E4A74E" Grid.Row="3" Text="tekst" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
-        <TextBox x:Name="stepNumber"  Grid.Column="2" Grid.Row="2" Width="300" Height="40" FontSize="27" MaxLength="20" HorizontalAlignment="Center" />
+        <TextBox x:Name="stepNumber" MaxLength="2" Grid.Column="2" Grid.Row="2" Width="300" Height="40" FontSize="27" HorizontalAlignment="Center" />
         <TextBox x:Name="textToBeEncrypted"  Grid.Column="2" Grid.Row="3" Width="300" Height="40" FontSize="27" MaxLength="20" HorizontalAlignment="Center"/>
         <Button x:Name="encryptButton" Background="#E4A74E" Grid.Column="1" Grid.Row="4" Height="60" Width="300" VerticalAlignment="Center" Content="Zaszyfruj" Click="encryptButton_Click"/>
         <Button x:Name="decipherButton" Background="#E4A74E" Grid.Column="2" Grid.Row="4" Height="60" Width="300" VerticalAlignment="Center" Content="Rozszyfruj" Click="decipherButton_Click"/>
