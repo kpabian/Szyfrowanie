@@ -42,48 +42,47 @@
 
         <Button x:Name="backButton" Grid.Column="1" Grid.Row="1" Foreground="white" Background="#1A1A1A" BorderThickness="0" Content="&lt;" FontSize="27" VerticalAlignment="Top" HorizontalAlignment="Left" Click="backButton_Click"/>
 
-        <TextBox x:Name="S32" Grid.Column="3" Grid.Row="2" Height="25" Width="25"/>
-        <TextBox x:Name="S33" Grid.Column="3" Grid.Row="3" Height="25" Width="25"/>
-        <TextBox x:Name="S34" Grid.Column="3" Grid.Row="4" Height="25" Width="25"/>
-        <TextBox x:Name="S35" Grid.Column="3" Grid.Row="5" Height="25" Width="25"/>
-        <TextBox x:Name="S36" Grid.Column="3" Grid.Row="6" Height="25" Width="25"/>
+        <TextBox x:Name="S22" Grid.Column="2" Grid.Row="2"  Height="25" Width="25" FontSize="16" FontWeight="Bold" />
+        <TextBox x:Name="S23" Grid.Column="2" Grid.Row="3" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S24" Grid.Column="2" Grid.Row="4" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S25" Grid.Column="2" Grid.Row="5" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S26" Grid.Column="2" Grid.Row="6" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
 
-        <TextBox x:Name="S42" Grid.Column="4" Grid.Row="2" Height="25" Width="25"/>
-        <TextBox x:Name="S43" Grid.Column="4" Grid.Row="3" Height="25" Width="25"/>
-        <TextBox x:Name="S44" Grid.Column="4" Grid.Row="4" Height="25" Width="25"/>
-        <TextBox x:Name="S45" Grid.Column="4" Grid.Row="5" Height="25" Width="25"/>
-        <TextBox x:Name="S46" Grid.Column="4" Grid.Row="6" Height="25" Width="25"/>
+        <TextBox x:Name="S32" Grid.Column="3" Grid.Row="2" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S33" Grid.Column="3" Grid.Row="3" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S34" Grid.Column="3" Grid.Row="4" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S35" Grid.Column="3" Grid.Row="5" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S36" Grid.Column="3" Grid.Row="6" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
 
-        <TextBox x:Name="S52" Grid.Column="5" Grid.Row="2" Height="25" Width="25"/>
-        <TextBox x:Name="S53" Grid.Column="5" Grid.Row="3" Height="25" Width="25"/>
-        <TextBox x:Name="S54" Grid.Column="5" Grid.Row="4" Height="25" Width="25"/>
-        <TextBox x:Name="S55" Grid.Column="5" Grid.Row="5" Height="25" Width="25"/>
-        <TextBox x:Name="S56" Grid.Column="5" Grid.Row="6" Height="25" Width="25"/>
+        <TextBox x:Name="S42" Grid.Column="4" Grid.Row="2" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S43" Grid.Column="4" Grid.Row="3" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S44" Grid.Column="4" Grid.Row="4" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S45" Grid.Column="4" Grid.Row="5" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S46" Grid.Column="4" Grid.Row="6" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
 
-        <TextBox x:Name="S62" Grid.Column="6" Grid.Row="2" Height="25" Width="25"/>
-        <TextBox x:Name="S63" Grid.Column="6" Grid.Row="3" Height="25" Width="25"/>
-        <TextBox x:Name="S64" Grid.Column="6" Grid.Row="4" Height="25" Width="25"/>
-        <TextBox x:Name="S65" Grid.Column="6" Grid.Row="5" Height="25" Width="25"/>
-        <TextBox x:Name="S66" Grid.Column="6" Grid.Row="6" Height="25" Width="25"/>
+        <TextBox x:Name="S52" Grid.Column="5" Grid.Row="2" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S53" Grid.Column="5" Grid.Row="3" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S54" Grid.Column="5" Grid.Row="4" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S55" Grid.Column="5" Grid.Row="5" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S56" Grid.Column="5" Grid.Row="6" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
 
-        <TextBox x:Name="S72" Grid.Column="6" Grid.Row="2" Height="25" Width="25"/>
-        <TextBox x:Name="S73" Grid.Column="6" Grid.Row="3" Height="25" Width="25"/>
-        <TextBox x:Name="S74" Grid.Column="6" Grid.Row="4" Height="25" Width="25"/>
-        <TextBox x:Name="S75" Grid.Column="6" Grid.Row="5" Height="25" Width="25"/>
-        <TextBox x:Name="S76" Grid.Column="6" Grid.Row="6" Height="25" Width="25"/>
+        <TextBox x:Name="S62" Grid.Column="6" Grid.Row="2" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S63" Grid.Column="6" Grid.Row="3" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S64" Grid.Column="6" Grid.Row="4" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S65" Grid.Column="6" Grid.Row="5" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S66" Grid.Column="6" Grid.Row="6" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
 
-        <TextBox x:Name="S82" Grid.Column="1" Grid.Row="2" Height="25" Width="25"/>
-        <TextBox x:Name="S83" Grid.Column="1" Grid.Row="3" Height="25" Width="25"/>
-        <TextBox x:Name="S84" Grid.Column="1" Grid.Row="4" Height="25" Width="25"/>
-        <TextBox x:Name="S85" Grid.Column="1" Grid.Row="5" Height="25" Width="25"/>
-        <TextBox x:Name="S86" Grid.Column="1" Grid.Row="6" Height="25" Width="25"/>
+        <TextBox x:Name="S72" Grid.Column="6" Grid.Row="2" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S73" Grid.Column="6" Grid.Row="3" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S74" Grid.Column="6" Grid.Row="4" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S75" Grid.Column="6" Grid.Row="5" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S76" Grid.Column="6" Grid.Row="6" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
 
-        <TextBox x:Name="S22" Grid.Column="2" Grid.Row="2"  Height="25" Width="25"/>
-        <TextBox x:Name="S23" Grid.Column="2" Grid.Row="3" Height="25" Width="25"/>
-        <TextBox x:Name="S24" Grid.Column="2" Grid.Row="4" Height="25" Width="25"/>
-        <TextBox x:Name="S25" Grid.Column="2" Grid.Row="5" Height="25" Width="25"/>
-        <TextBox x:Name="S26" Grid.Column="2" Grid.Row="6" Height="25" Width="25"/>
-
+        <TextBox x:Name="S82" Grid.Column="1" Grid.Row="2" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S83" Grid.Column="1" Grid.Row="3" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S84" Grid.Column="1" Grid.Row="4" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S85" Grid.Column="1" Grid.Row="5" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
+        <TextBox x:Name="S86" Grid.Column="1" Grid.Row="6" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
 
     </Grid>
 </Window>
