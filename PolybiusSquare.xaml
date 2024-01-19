@@ -36,11 +36,11 @@
         <TextBox x:Name="cipherText" Grid.Column="4" Grid.ColumnSpan ="4" Grid.Row="7" Width="250" Height="25" MaxLength="20" HorizontalAlignment="Left" />
         <TextBlock Grid.Column="1" Grid.ColumnSpan ="2" Grid.Row="7" Foreground="#E4A74E" Text="tekst" FontSize="20" Height="25" HorizontalAlignment="Right" Margin="30,0"/>
 
-        <Button x:Name="encryptButton" Grid.Column="1" Grid.ColumnSpan ="2" Grid.Row="8" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Zaszyfruj" Click="encryptButton_Click"/>
-        <Button x:Name="decipherButton" Grid.Column="3" Grid.ColumnSpan ="2" Grid.Row="8" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Rozszyfruj" Click="decipherButton_Click"/>
-        <Button x:Name="randButton" Grid.Column="5" Grid.ColumnSpan ="2" Grid.Row="8" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Rand" Click="randButton_Click" />
+        <Button x:Name="encryptButton" Grid.Column="1" Grid.ColumnSpan ="2" Grid.Row="8" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Zaszyfruj" Click="EncryptButton_Click"/>
+        <Button x:Name="decipherButton" Grid.Column="3" Grid.ColumnSpan ="2" Grid.Row="8" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Rozszyfruj" Click="DecipherButton_Click"/>
+        <Button x:Name="randButton" Grid.Column="5" Grid.ColumnSpan ="2" Grid.Row="8" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Rand" Click="RandButton_Click" />
 
-        <Button x:Name="backButton" Grid.Column="1" Grid.Row="1" Foreground="white" Background="#1A1A1A" BorderThickness="0" Content="&lt;" FontSize="27" VerticalAlignment="Top" HorizontalAlignment="Left" Click="backButton_Click"/>
+        <Button x:Name="backButton" Grid.Column="1" Grid.Row="1" Foreground="white" Background="#1A1A1A" BorderThickness="0" Content="&lt;" FontSize="27" VerticalAlignment="Top" HorizontalAlignment="Left" Click="BackButton_Click"/>
 
         <TextBox x:Name="S22" Grid.Column="2" Grid.Row="2"  Height="25" Width="25" FontSize="16" FontWeight="Bold" />
         <TextBox x:Name="S23" Grid.Column="2" Grid.Row="3" Height="25" Width="25" FontSize="16" FontWeight="Bold"/>
