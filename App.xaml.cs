@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Bezpieczenstwo1
+namespace Bezpieczenstwo
 {
     /// <summary>
     /// Interaction logic for App.xaml

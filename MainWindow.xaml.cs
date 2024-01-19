@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Bezpieczenstwo1
+namespace Bezpieczenstwo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

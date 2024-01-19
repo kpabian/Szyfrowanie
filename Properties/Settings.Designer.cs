@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bezpieczenstwo1.Properties
+namespace Bezpieczenstwo.Properties
 {
 
 

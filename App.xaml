@@ -1,7 +1,7 @@
-﻿<Application x:Class="Bezpieczenstwo1.App"
+﻿<Application x:Class="Bezpieczenstwo.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Bezpieczenstwo1"
+             xmlns:local="clr-namespace:Bezpieczenstwo"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

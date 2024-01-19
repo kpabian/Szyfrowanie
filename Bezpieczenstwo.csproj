@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="VigenereCipher.xaml.cs">
+      <DependentUpon>VigenereCipher.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TrithemiusCipher.xaml.cs">
       <DependentUpon>TrithemiusCipher.xaml</DependentUpon>
     </Compile>
@@ -80,6 +83,10 @@
     <Page Include="PolybiusSquare.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VigenereCipher.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="TrithemiusCipher.xaml">
       <SubType>Designer</SubType>

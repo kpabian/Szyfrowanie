@@ -14,14 +14,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Bezpieczenstwo1
+namespace Bezpieczenstwo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class CaesarCipher : Window
     {
-        public char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u', 'w', 'x', 'y', 'z', 'ź', 'ż' };
+        public char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u','v', 'w', 'x', 'y', 'z', 'ź', 'ż' };
         public CaesarCipher()
         {
             InitializeComponent();
@@ -89,7 +89,7 @@ namespace Bezpieczenstwo1
             mainWindow.Show();
             this.Close();
         }
-        
-    }
     
+    }
+
 }
