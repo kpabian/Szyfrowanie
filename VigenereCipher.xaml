@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bezpieczenstwo"
         mc:Ignorable="d" Background="#1A1A1A"
-        Title="TrithemiusCipher" Height="450" Width="800">
+        Title="VigenereCipher" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -19,14 +19,18 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan ="2" Foreground="#E4A74E" Text="Szyfr Tritemiusza" FontSize="27" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Column="1" Grid.Row="2"  Foreground="#E4A74E" Text="text" FontSize="27" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan ="2" Foreground="#E4A74E" Text="Szyfr Vigenère’a" FontSize="27" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="2"  Foreground="#E4A74E" Text="tekst" FontSize="27" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="3"  Foreground="#E4A74E" Text="klucz" FontSize="27" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBox x:Name="cipherText" Grid.Column="2" Grid.Row="2" Width="250" Height="25" MaxLength="20" HorizontalAlignment="Center"/>
+        <TextBox x:Name="keyText" Grid.Column="2" Grid.Row="3" Width="250" Height="25" MaxLength="20" HorizontalAlignment="Center"/>
 
-        <Button x:Name="encryptButton" Grid.Column="1"  Grid.Row="3" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Zaszyfruj" Click="encryptButton_Click"/>
-        <Button x:Name="decipherButton" Grid.Column="2" Grid.Row="3" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Rozszyfruj" Click="decipherButton_Click"/>
+        <Button x:Name="backButton" Grid.Column="1" Grid.Row="1" Foreground="white" Background="#1A1A1A" BorderThickness="0" Content="&lt;" FontSize="27" VerticalAlignment="Top" HorizontalAlignment="Left" Click="BackButton_Click"/>
+        <Button x:Name="encryptButton" Grid.Column="1"  Grid.Row="4" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Zaszyfruj" Click="EncryptButton_Click"/>
+        <Button x:Name="decipherButton" Grid.Column="2" Grid.Row="4" Background="#E4A74E" Height="45" Width="150" VerticalAlignment="Center" Content="Rozszyfruj" Click="DecipherButton_Click"/>
     </Grid>
 </Window>

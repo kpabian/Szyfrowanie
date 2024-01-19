@@ -25,7 +25,7 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="backButton" Grid.Column="1" Grid.Row="1" Foreground="white" Background="#1A1A1A" BorderThickness="0" Content="&lt;" FontSize="27" VerticalAlignment="Top" HorizontalAlignment="Left" Click="backButton_Click"/>
+        <Button x:Name="backButton" Grid.Column="1" Grid.Row="1" Foreground="white" Background="#1A1A1A" BorderThickness="0" Content="&lt;" FontSize="27" VerticalAlignment="Top" HorizontalAlignment="Left" Click="BackButton_Click"/>
 
 
         <TextBlock Grid.Column="1" Foreground="#E4A74E" Grid.Row="1" Grid.ColumnSpan ="2" Text="Szyfr Cezara" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -34,8 +34,8 @@
 
         <TextBox x:Name="stepNumber" MaxLength="2" Grid.Column="2" Grid.Row="2" Width="300" Height="40" FontSize="27" HorizontalAlignment="Center" />
         <TextBox x:Name="textToBeEncrypted"  Grid.Column="2" Grid.Row="3" Width="300" Height="40" FontSize="27" MaxLength="20" HorizontalAlignment="Center"/>
-        <Button x:Name="encryptButton" Background="#E4A74E" Grid.Column="1" Grid.Row="4" Height="60" Width="300" VerticalAlignment="Center" Content="Zaszyfruj" Click="encryptButton_Click"/>
-        <Button x:Name="decipherButton" Background="#E4A74E" Grid.Column="2" Grid.Row="4" Height="60" Width="300" VerticalAlignment="Center" Content="Rozszyfruj" Click="decipherButton_Click"/>
+        <Button x:Name="encryptButton" Background="#E4A74E" Grid.Column="1" Grid.Row="4" Height="60" Width="300" VerticalAlignment="Center" Content="Zaszyfruj" Click="EncryptButton_Click"/>
+        <Button x:Name="decipherButton" Background="#E4A74E" Grid.Column="2" Grid.Row="4" Height="60" Width="300" VerticalAlignment="Center" Content="Rozszyfruj" Click="DecipherButton_Click"/>
 
     </Grid>
 </Window>

@@ -48,7 +48,9 @@ namespace Bezpieczenstwo
 
         private void VigenereButton_Click(object sender, RoutedEventArgs e)
         {
-
+            VigenereCipher vigenereCipher = new VigenereCipher();
+            vigenereCipher.Show();
+            this.Close();
         }
     }
 }

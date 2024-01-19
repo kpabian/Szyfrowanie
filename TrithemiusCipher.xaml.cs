@@ -1,61 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Bezpieczenstwo
 {
-    /// <summary>
-    /// Interaction logic for TrithemiusCipher.xaml
-    /// </summary>
     public partial class TrithemiusCipher : Window
     {
-        char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u', 'w', 'x', 'y', 'z', 'ź', 'ż' };
+        readonly char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u', 'w', 'x', 'y', 'z', 'ź', 'ż' };
 
-        public TrithemiusCipher()
-        {
-            InitializeComponent();
-        }
+        public TrithemiusCipher() => InitializeComponent();
 
-        private void encryptButton_Click(object sender, RoutedEventArgs e)
+        private void EncryptButton_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder encrypted = new StringBuilder();
             string text = cipherText.Text;
-            
-            for(int i = 0; i < text.Length; i++)
+            try
             {
-                int x = Array.IndexOf(alphabet, text[i]) + i;
-                int z = alphabet.Length;
-                while(x >= alphabet.Length)
-                    x = x - alphabet.Length;
-                encrypted.Append(alphabet[x]);
+                for (int i = 0; i < text.Length; i++)
+                {
+                    int index = Array.IndexOf(alphabet, text[i]) + i;
+                    while (index >= alphabet.Length)
+                        index -= alphabet.Length;
+                    encrypted.Append(alphabet[index]);
+                }
+                cipherText.Text = encrypted.ToString();
             }
-            cipherText.Text = encrypted.ToString();
+            catch (Exception)
+            {
+                MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami");
+            }
         }
 
-        private void decipherButton_Click(object sender, RoutedEventArgs e)
+        private void DecipherButton_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder encrypted = new StringBuilder();
             string text = cipherText.Text;
 
-            for (int i = 0; i < text.Length; i++)
+            try
             {
-                int x = Array.IndexOf(alphabet, text[i]) - i;
-                int z = alphabet.Length;
-                while (x < 0)
-                    x = x + alphabet.Length;
-                encrypted.Append(alphabet[x]);
+                for (int i = 0; i < text.Length; i++)
+                {
+                    int index = Array.IndexOf(alphabet, text[i]) - i;
+                    while (index < 0)
+                        index += alphabet.Length;
+                    encrypted.Append(alphabet[index]);
+                }
+                cipherText.Text = encrypted.ToString();
             }
-            cipherText.Text = encrypted.ToString();
+            catch (Exception)
+            {
+                MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami");
+            }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }

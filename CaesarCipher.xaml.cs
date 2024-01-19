@@ -1,33 +1,15 @@
-﻿using System.Text.RegularExpressions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Bezpieczenstwo
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class CaesarCipher : Window
     {
         public char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u','v', 'w', 'x', 'y', 'z', 'ź', 'ż' };
-        public CaesarCipher()
-        {
-            InitializeComponent();
-        }
+        public CaesarCipher() => InitializeComponent();
 
-        private void encryptButton_Click(object sender, RoutedEventArgs e)
+        private void EncryptButton_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder sipher = new StringBuilder();
 
@@ -58,7 +40,7 @@ namespace Bezpieczenstwo
             }
         }
 
-        private void decipherButton_Click(object sender, RoutedEventArgs e)
+        private void DecipherButton_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder sipher = new StringBuilder();
             try
@@ -83,7 +65,7 @@ namespace Bezpieczenstwo
             }
         }
 
-        private void backButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
