@@ -60,10 +60,9 @@ namespace Bezpieczenstwo
 
                 cipherText.Text = newText.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                //MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami oraz poprawnie wprowadzoną wartość przesunięcia");
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami oraz poprawnie wprowadzoną wartość przesunięcia");
             }
         }
 
@@ -83,11 +82,9 @@ namespace Bezpieczenstwo
 
                 cipherText.Text = newText.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                //MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami");
-                Console.WriteLine(ex.ToString());
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami");
             }
         }
 
