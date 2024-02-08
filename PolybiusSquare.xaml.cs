@@ -10,7 +10,7 @@ namespace Bezpieczenstwo
     public partial class PolybiusSquare : Window
     {
         private readonly char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u', 'w', 'x', 'y', 'z', 'ź', 'ż', ' ' };
-        private readonly Dictionary<char, string> cipher = new Dictionary<char, string>();
+        private readonly Dictionary<char, int> cipher = new Dictionary<char, int>();
         private readonly Random random = new Random();
         private List<TextBox> textboxList;
 
@@ -19,7 +19,7 @@ namespace Bezpieczenstwo
         protected override void OnInitialized(EventArgs e)
         {
             base.OnInitialized(e);
-            textboxList = new List<TextBox> { S22, S23, S24, S25, S26, S32, S33, S34, S35, S36, S42, S43, S44, S45, S46, S52, S53, S54, S55, S56, S62, S63, S64, S65, S66, S72, S73, S74, S75, S76, S82, S83, S84, S85, S86, };
+            textboxList = new List<TextBox> {S11, S12, S13, S14, S15, S21, S22, S23, S24, S25, S31, S32, S33, S34, S35, S41, S42, S43, S44, S45, S51, S52, S53, S54, S55, S61, S62, S63, S64, S65, S71, S72, S73, S74, S75, };
         }
 
         private void RandButton_Click(object sender, RoutedEventArgs e)
@@ -47,21 +47,23 @@ namespace Bezpieczenstwo
             cipher.Clear();
             for (int i = 0; alphabet.Length > i; i++)
             {
-                cipher.Add(alphabet[i], textboxList[i].Name);
+                cipher.Add(alphabet[i], int.Parse(textboxList[i].Name.Substring(1)));
             }
             try
             {
-                foreach (char c in cipherText.Text)
+                for (int i = 0; i < cipherText.Text.Length; i++)
                 {
-                    newText.Append(cipher.First(x => x.Key == c).Value[1]);
-                    newText.Append(cipher.First(x => x.Key == c).Value[2]);
+                    int val = cipher.First(x => x.Key == cipherText.Text[i]).Value;
+                    if (i % 2 != 0) val += 11;
+                    newText.Append(val);
                 }
-                
+
                 cipherText.Text = newText.ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami oraz poprawnie wprowadzoną wartość przesunięcia");
+                //MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami oraz poprawnie wprowadzoną wartość przesunięcia");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -73,19 +75,19 @@ namespace Bezpieczenstwo
             {
                 for (int i = 0; i < cipherText.Text.Length; i += 2)
                 {
-                    StringBuilder value = new StringBuilder();
-                    value.Append('S');
-                    value.Append(cipherText.Text[i]);
-                    value.Append(cipherText.Text[i + 1]);
-                    char a = cipher.First(x => x.Value == value.ToString()).Key;
-                    newText.Append(a);
+                    int val = int.Parse(cipherText.Text.Substring(i, 2));
+                    if (i % 4 != 0) val -= 11;
+                    char c = cipher.First(x => x.Value == val).Key;
+                    newText.Append(c);
                 }
 
                 cipherText.Text = newText.ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami oraz poprawnie wprowadzoną wartość przesunięcia");
+                //MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami");
+                Console.WriteLine(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
 
