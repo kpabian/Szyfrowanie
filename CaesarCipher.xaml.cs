@@ -6,7 +6,7 @@ namespace Bezpieczenstwo
 {
     public partial class CaesarCipher : Window
     {
-        public char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u','v', 'w', 'x', 'y', 'z', 'ź', 'ż' };
+        private readonly char[] alphabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ź', 'ż' };
         public CaesarCipher() => InitializeComponent();
 
         private void EncryptButton_Click(object sender, RoutedEventArgs e)
@@ -27,14 +27,14 @@ namespace Bezpieczenstwo
 
                         int charSipher = i + int.Parse(stepNumber.Text);
                         if (charSipher >= alphabet.Length)
-                            charSipher = charSipher - alphabet.Length;
+                            charSipher -= alphabet.Length;
 
                         sipher.Append(alphabet[charSipher]);
                     }
                 }
                 textToBeEncrypted.Text = sipher.ToString();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami oraz poprawnie wprowadzoną wartość przesunięcia");
             }
@@ -53,13 +53,13 @@ namespace Bezpieczenstwo
 
                     int charSipher = i - int.Parse(stepNumber.Text);
                     if (charSipher < 0)
-                        charSipher = charSipher + alphabet.Length;
+                        charSipher += alphabet.Length;
 
                     sipher.Append(alphabet[charSipher]);
                 }
                 textToBeEncrypted.Text = sipher.ToString();
             }
-            catch( Exception )
+            catch (Exception)
             {
                 MessageBox.Show("Wprowadź ciąg znaków z samymi małymi literami i spacjami oraz poprawnie wprowadzoną wartość przesunięcia");
             }
@@ -69,9 +69,7 @@ namespace Bezpieczenstwo
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            this.Close();
+            Close();
         }
-    
     }
-
 }

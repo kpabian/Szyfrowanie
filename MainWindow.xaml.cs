@@ -10,28 +10,28 @@ namespace Bezpieczenstwo
         {
             CaesarCipher caesarCipher = new CaesarCipher();
             caesarCipher.Show();
-            this.Close();
+            Close();
         }
 
         private void PolybiusButton_Click(object sender, RoutedEventArgs e)
         {
             PolybiusSquare polybiusSquare = new PolybiusSquare();
             polybiusSquare.Show();
-            this.Close();
+            Close();
         }
 
         private void TrithemiusButton_Click(object sender, RoutedEventArgs e)
         {
             TrithemiusCipher trithemiusCipher = new TrithemiusCipher();
             trithemiusCipher.Show();
-            this.Close();
+            Close();
         }
 
         private void VigenereButton_Click(object sender, RoutedEventArgs e)
         {
             VigenereCipher vigenereCipher = new VigenereCipher();
             vigenereCipher.Show();
-            this.Close();
+            Close();
         }
     }
 }
